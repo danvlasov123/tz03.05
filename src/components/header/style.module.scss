@@ -1,0 +1,114 @@
+.header__scroll {
+    transition: all 0.4s linear;
+    background: white;
+    box-shadow: 0px 3px 20px 0px rgba(34, 60, 80, 0.2);
+}
+.header__mobile__scroll {
+    background: white !important
+}
+.header {
+    .header_mobile {
+        display: none;
+    }
+    transition: all 0.4s linear;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    &_mobile_sun {
+        display: none;
+    }
+    &_container {
+        max-width: 1440px;
+        padding: 24px;
+        display: flex;
+        height: 40px;
+        justify-content: space-between;
+        margin: 0 auto;
+        align-items: center;
+        & > nav ul {
+            display: flex;
+            flex-direction: row;
+            li {
+              margin-left: 48px;
+              display: flex;
+              align-items: center;
+              img {
+                  cursor: pointer;
+                  transition: opacity 0.2s linear;
+                &:hover {
+                    opacity: 0.8;
+                }
+              }
+              a {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 24px;
+                letter-spacing: 0.1px;
+                color: #475569;
+                transition: opacity 0.2s linear;
+                &:hover {
+                    opacity: 0.8;
+                }
+              }
+            }
+        }
+    }
+    &_logo {
+        cursor: pointer;
+        max-width: 184px;
+        width: 100%;
+        max-height: 30px;
+    }
+    &_menu {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .header {
+        &_mobile_sun {
+            display: block;
+        }
+        &_container {
+            padding: 14px 24px;
+            flex-direction: row-reverse;
+        & > nav {
+            display: none;
+        }
+    }
+    &_menu {
+        display: block;
+        height: 32px;
+        width: 32px;
+        cursor: pointer;
+        transition: all 0.2s linear;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+    } 
+    .header_mobile {
+        display: block !important;
+        transition: all 0.3s linear;
+        position: absolute;
+        width: 320px;
+        height: 100vh;
+        background: linear-gradient(0deg, rgba(148,187,233,1) 30%, rgba(238,174,202,0) 100%);
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 24px;
+            margin-top: 30px;
+            li {
+                margin-bottom: 40px;
+                a {
+                    font-size: 26px;
+                    color: black;
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+}
