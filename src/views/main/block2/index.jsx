@@ -14,10 +14,6 @@ export default function Block2() {
       img1: pictureMenu,
     },
     {
-      title: "Communication",
-      img: "https://pixabay.com/get/g07ea7078aec16786bcba173203bad782cb215136daae5f026c9e11d051728d4d3965cd5e35316b9d70d9ad1c13bc6113_1280.png",
-    },
-    {
       title: "Analysing",
       img: "https://pixabay.com/get/gd8007e339d1eb67acf755c0433aa66f6dcd12271b0bc9ddb79723505ac4023c6d7f4b8aa4fc868d7012eda8c91e15571_1280.jpg",
     },
