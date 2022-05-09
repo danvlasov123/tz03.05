@@ -8,8 +8,14 @@ import useScroll from "../../hooks/useScroll";
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const scrollTop = useScroll();
+
   return (
-    <header className={`${s.header} ${scrollTop > 25 && s.header__scroll} `}>
+    <header
+      className={`${s.header} ${scrollTop > 25 && s.header__scroll} `}
+      style={{
+        background: showMenu && "white",
+      }}
+    >
       <div className={s.header_container}>
         <img src={sun} alt="sun" className={s.header_mobile_sun} />
         <img className={s.header_logo} src={logo} alt="logo" />
@@ -43,9 +49,9 @@ const Header = () => {
             viewBox="0 0 24 24"
             fill="none"
             stroke={showMenu ? "blue" : "black"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <line x1="3" y1="12" x2="21" y2="12"></line>
             <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -54,11 +60,9 @@ const Header = () => {
         </div>
       </div>
       <div
-        className={`${s.header_mobile} ${
-          scrollTop > 25 && s.header__mobile__scroll
-        } `}
+        className={s.header_mobile}
         style={{
-          left: showMenu ? 0 : -400,
+          left: showMenu ? 0 : "-100%",
         }}
       >
         <ul>
